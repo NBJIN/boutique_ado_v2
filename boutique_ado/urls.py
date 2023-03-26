@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),  # include the accounts urls in the project admin djangoallauth
+    path('', include('home.urls')),  # include the home urls in the project admin  by importing include above
 ]
